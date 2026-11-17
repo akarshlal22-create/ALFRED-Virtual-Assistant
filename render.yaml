@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: alfred-virtual-assistant
+    runtime: docker
+    plan: free
+    branch: main
+    healthCheckPath: /api/status
+    envVars:
+      - key: BOTNAME
+        value: Alfred
+      - key: USER_NAME
+        value: User
+      - key: PORT
+        value: 5002

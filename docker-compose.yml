@@ -1,0 +1,11 @@
+services:
+  alfred:
+    build: .
+    container_name: alfred-assistant
+    ports:
+      - "5002:5002"
+    environment:
+      - PORT=5002
+      - USER_NAME=User
+      - BOTNAME=Alfred
+    restart: unless-stopped
